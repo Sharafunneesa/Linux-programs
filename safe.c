@@ -53,6 +53,8 @@ int main()
   pthread_t odd;
   pthread_t even; 
   
+  //initiolizing the mutex variable
+  pthread_mutex_init(&mutex);
   
   //creating two threads and calling the function
   pthread_create(&odd,NULL,&odd_even_sum,NULL);
