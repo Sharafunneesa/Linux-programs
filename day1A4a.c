@@ -47,26 +47,3 @@ int main(int argc,char *argv[])
                else
                    printf("file is empty\n");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
