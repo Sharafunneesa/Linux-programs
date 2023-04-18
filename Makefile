@@ -1,25 +1,12 @@
-#obj-m := static.o
-#obj-m := dynamic.o
-obj-m := file_ops.o
-
-
+obj-m += gpio.o
  
 
-KERNELDIR = /lib/modules/$(shell uname -r)/build
-PWD := $(shell pwd)
+KERN_DIR := /lib/modules/$(shell uname -r)/build/
+
+all:
+	make -C $(KERN_DIR) M=$(PWD) modules
 
  
-
-
-default:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
-
- 
-
 clean:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
+	make -C $(KERN_DIR) M=$(PWD) clean
 
- 
-
-install:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules_install
