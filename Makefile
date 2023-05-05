@@ -1,4 +1,4 @@
-obj-m += gpio.o
+obj-m += i2c_lcd_driver.o
  
 
 KERN_DIR := /lib/modules/$(shell uname -r)/build/
